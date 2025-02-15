@@ -1,0 +1,33 @@
+baseURL = 'https://jtzm.dev/'
+languageCode = 'zh-Hans'
+title = '兼听则明'
+theme = 'hugo-book'
+hasCJKLanguage = true
+
+
+
+[[markup]]
+  [[markup.goldmark]]
+    [[markup.goldmark.parser]]
+      [[markup.goldmark.parser.attribute]]
+        block = true
+    [[markup.goldmark.renderer]]
+      unsafe = true
+  [[markup.tableOfContents]]
+    startLevel = 1
+
+
+[[menu.before]]
+  name = "Blog"
+  pageRef = '/posts'
+  weight = 2
+
+
+[[menu.after]]
+  name = "Github"
+  url = "https://github.com/TresChar"
+  weight = 2
+
+
+[params]
+  BookTheme = 'light'
