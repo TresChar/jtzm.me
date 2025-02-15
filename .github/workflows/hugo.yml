@@ -53,6 +53,10 @@ jobs:
           hugo version
           ls -la
           hugo --minify --baseURL "https://jtzm.me/" -v -d public
+          echo "Hugo build complete, checking public directory:"
+          ls -la public/
+          echo "Checking if public/index.html exists:"
+          cat public/index.html || echo "index.html not found"
       - name: Debug Info
         run: |
           echo "Current directory contents:"
@@ -62,7 +66,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: public
 
   # Deployment job
   deploy:
