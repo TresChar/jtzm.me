@@ -1,4 +1,4 @@
-baseURL = 'https://jtzm.dev/'
+baseURL = 'https://jtzm.me/'
 languageCode = 'zh-Hans'
 title = '兼听则明'
 theme = 'hugo-book'
