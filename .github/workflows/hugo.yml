@@ -50,10 +50,14 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo --minify --baseURL "https://jtzm.me/"
+      - name: List public directory
+        run: |
+          ls -la ./public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          name: github-pages
 
   # Deployment job
   deploy:
