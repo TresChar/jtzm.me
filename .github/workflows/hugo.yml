@@ -58,10 +58,14 @@ jobs:
           ls -la public/
           echo "Checking if public/index.html exists:"
           cat public/index.html || echo "index.html not found"
+          echo "Creating artifact directory..."
+          mkdir -p artifact
+          cp -r public/* artifact/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: artifact
 
   # Deployment job
   deploy:
