@@ -52,11 +52,17 @@ jobs:
           pwd
           hugo version
           ls -la
-          hugo --minify --baseURL "https://jtzm.me/" -v -d public
+          echo "Building Hugo site..."
+          hugo --minify --baseURL "https://jtzm.me/" -v || exit 1
           echo "Hugo build complete, checking public directory:"
           ls -la public/
           echo "Checking if public/index.html exists:"
           cat public/index.html || echo "index.html not found"
+      - name: Create artifact
+        run: |
+          tar -czf github-pages.tar.gz public/
+          echo "Created archive of public directory"
+          ls -la github-pages.tar.gz
       - name: Debug Info
         run: |
           echo "Current directory contents:"
@@ -66,7 +72,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: github-pages.tar.gz
 
   # Deployment job
   deploy:
