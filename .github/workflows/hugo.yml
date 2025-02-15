@@ -51,7 +51,8 @@ jobs:
         run: |
           pwd
           hugo version
-          hugo --minify --baseURL "https://jtzm.me/" -v
+          ls -la
+          hugo --minify --baseURL "https://jtzm.me/" -v -d public
       - name: Debug Info
         run: |
           echo "Current directory contents:"
@@ -62,7 +63,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-          name: github-pages
 
   # Deployment job
   deploy:
