@@ -1,0 +1,9 @@
+[config]
+default_to_workspace = false
+
+
+[tasks.dev]
+script = '''
+    hugo server --tlsCertFile /opt/homebrew/etc/nginx/xbook.pro.pem \
+                --tlsKeyFile /opt/homebrew/etc/nginx/xbook.pro-key.pem
+'''
