@@ -49,25 +49,17 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          pwd
-          hugo version
-          ls -la
-          echo "Building Hugo site..."
-          hugo --minify --baseURL "https://jtzm.me/" --destination public || exit 1
-          ls -la public/
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-          name: github-pages
-          retention-days: 1
+          
 
   deploy:
-    permissions:
-      pages: write
-      id-token: write
-      contents: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
