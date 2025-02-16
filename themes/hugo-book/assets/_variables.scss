@@ -124,3 +124,25 @@ $table-header-background: #2d2d2d;
   background: rgba(200, 251, 124, 0.3);
   color: #fff;
 }
+
+// Giscus iframe container
+.giscus {
+  width: 100%;
+  margin-top: $padding-16;
+  
+  .giscus-frame {
+    width: 100%;
+    border: none;
+    background-color: $body-background;
+  }
+}
+
+// Dark theme variables for the iframe content
+:root {
+  --giscus-background-color: #{$body-background};
+  --giscus-text-color: #{$body-font-color};
+  --giscus-link-color: #{$color-link};
+  --giscus-border-color: #{$table-border-color};
+  --giscus-button-color: #{$color-link};
+  --giscus-button-hover-color: #{darken($color-link, 10%)};
+}
