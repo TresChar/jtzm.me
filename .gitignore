@@ -13,3 +13,7 @@ hugo.linux
 /.hugo_build.lock
 .idea
 .DS_Store
+/public
+/public
+/public/katex
+/public/katex/fonts
