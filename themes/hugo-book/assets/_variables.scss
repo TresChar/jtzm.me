@@ -1,3 +1,95 @@
 /* You can override SASS variables here. */
 
-// @import "plugins/dark";
+@import "plugins/dark";
+
+// Dark theme colors
+$body-background: #1a1a1a;
+$body-font-color: #d4d4d4;
+$color-link: #C8FB7C;
+$color-visited-link: darken(#C8FB7C, 15%);
+
+// Sidebar and ToC
+$nav-background: #242424;
+$nav-link-color: #d4d4d4;
+
+// Headers
+$header-color: #C8FB7C;
+
+// Code blocks
+$code-background: #2d2d2d;
+$code-color: #d4d4d4;
+
+// Tables
+$table-background: #242424;
+$table-border-color: #404040;
+$table-header-background: #2d2d2d;
+
+// Custom dark theme variables
+:root[data-theme="dark"] {
+  --body-background: #{$body-background};
+  --body-font-color: #{$body-font-color};
+  --color-link: #{$color-link};
+  --color-visited-link: #{$color-visited-link};
+
+  --header-color: #{$header-color};
+  
+  --nav-background: #{$nav-background};
+  --nav-link-color: #{$nav-link-color};
+
+  --code-background: #{$code-background};
+  --code-color: #{$code-color};
+
+  --table-background: #{$table-background};
+  --table-border-color: #{$table-border-color};
+  --table-header-background: #{$table-header-background};
+}
+
+// Giscus dark theme overrides
+:root {
+  --color-bg-primary: #{$body-background};
+  --color-border-primary: #{$table-border-color};
+  --color-bg-tertiary: #{$nav-background};
+  
+  // Comment box styles
+  .gsc-main {
+    background-color: $body-background;
+    color: $body-font-color;
+  }
+  
+  .gsc-comments {
+    background-color: $body-background;
+  }
+  
+  .gsc-comment-box {
+    background-color: $nav-background;
+    border-color: $table-border-color;
+    
+    &-tabs {
+      background-color: $nav-background;
+      border-color: $table-border-color;
+    }
+    
+    &-bottom {
+      background-color: $nav-background;
+    }
+    
+    &-buttons {
+      button {
+        background-color: $code-background;
+        color: $color-link;
+        border-color: $table-border-color;
+        
+        &:hover {
+          background-color: darken($code-background, 5%);
+          color: lighten($color-link, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Selection highlight
+::selection {
+  background: rgba(200, 251, 124, 0.3);
+  color: #fff;
+}

@@ -18,6 +18,11 @@ hasCJKLanguage = true
 
 
 [[menu.before]]
+  name = "Posts"
+  pageRef = '/posts/begin'
+  weight = 1
+
+[[menu.before]]
   name = "Blog"
   pageRef = '/posts'
   weight = 2
