@@ -114,28 +114,5 @@ $table-header-background: #2d2d2d;
     }
   }
 
-  .btn-primary {
-    background-color: $color-link !important;
-    color: $body-background !important;
-    border: 1px solid $color-link !important;
-    border-radius: $border-radius * 2;
-    padding: $padding-8 $padding-16;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: $padding-8;
-
-    &:hover {
-      background-color: darken($color-link, 10%) !important;
-      border-color: darken($color-link, 10%) !important;
-      text-decoration: none !important;
-      transform: translateY(-1px);
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      color: $body-background !important;
-    }
-  }
+  
 }
