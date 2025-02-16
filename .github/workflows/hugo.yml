@@ -53,7 +53,7 @@ jobs:
           hugo version
           ls -la
           echo "Building Hugo site..."
-          hugo --minify --baseURL "https://jtzm.me/" --verbose || exit 1
+          hugo --minify --baseURL "https://jtzm.me/" --logLevel debug || exit 1
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
