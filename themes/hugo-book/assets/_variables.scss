@@ -56,31 +56,64 @@ $table-header-background: #2d2d2d;
   
   .gsc-comments {
     background-color: $body-background;
-  }
-  
-  .gsc-comment-box {
-    background-color: $nav-background;
-    border-color: $table-border-color;
-    
-    &-tabs {
+    color: $body-font-color;
+
+    .gsc-header {
+      color: $body-font-color;
+    }
+
+    .gsc-comment-box {
       background-color: $nav-background;
       border-color: $table-border-color;
-    }
-    
-    &-bottom {
-      background-color: $nav-background;
-    }
-    
-    &-buttons {
-      button {
-        background-color: $code-background;
-        color: $color-link;
+
+      &-tabs {
+        background-color: $nav-background;
         border-color: $table-border-color;
-        
-        &:hover {
-          background-color: darken($code-background, 5%);
-          color: lighten($color-link, 10%);
+
+        button {
+          &.active {
+            background-color: $code-background;
+            border-color: $color-link;
+            color: $color-link;
+          }
         }
+      }
+
+      &-textarea {
+        background-color: $code-background !important;
+        border-color: $table-border-color !important;
+        color: $body-font-color !important;
+
+        &:focus {
+          border-color: $color-link !important;
+        }
+      }
+    }
+
+    .color-bg-primary {
+      background-color: $nav-background !important;
+    }
+
+    .color-bg-tertiary {
+      background-color: $nav-background !important;
+    }
+
+    .color-border-primary {
+      border-color: $table-border-color !important;
+    }
+
+    .btn {
+      background-color: $code-background !important;
+      border-color: $table-border-color !important;
+      color: $color-link !important;
+
+      &:hover {
+        background-color: darken($code-background, 5%) !important;
+        border-color: $color-link !important;
+      }
+
+      svg {
+        color: $color-link !important;
       }
     }
   }
