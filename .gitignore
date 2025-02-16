@@ -18,3 +18,4 @@ hugo.linux
 /public/katex
 /public/katex/fonts
 /resources
+themes/hugo-book/static/katex/fonts/KaTeX_Main-BoldItalic.woff
