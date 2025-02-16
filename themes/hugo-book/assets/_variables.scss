@@ -128,21 +128,98 @@ $table-header-background: #2d2d2d;
 // Giscus iframe container
 .giscus {
   width: 100%;
-  margin-top: $padding-16;
+  margin: $padding-16 * 2 auto;
+  padding: $padding-16;
   
   .giscus-frame {
     width: 100%;
     border: none;
+    border-radius: $border-radius * 3;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     background-color: $body-background;
+    overflow: hidden;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(200, 251, 124, 0.15);
+    }
   }
-}
 
-// Dark theme variables for the iframe content
-:root {
+  // Dark theme variables for the iframe content
   --giscus-background-color: #{$body-background};
   --giscus-text-color: #{$body-font-color};
   --giscus-link-color: #{$color-link};
   --giscus-border-color: #{$table-border-color};
   --giscus-button-color: #{$color-link};
   --giscus-button-hover-color: #{darken($color-link, 10%)};
+  
+  // Comment box styles
+  .gsc-main {
+    color: $body-font-color;
+  }
+  
+  .gsc-comments {
+    background-color: $body-background;
+    color: $body-font-color;
+
+    .gsc-header {
+      color: $body-font-color;
+    }
+
+    .gsc-comment-box {
+      background-color: $nav-background;
+      border-color: $table-border-color;
+
+      &-tabs {
+        background-color: $nav-background;
+        border-color: $table-border-color;
+
+        button {
+          &.active {
+            background-color: $code-background;
+            border-color: $color-link;
+            color: $color-link;
+          }
+        }
+      }
+
+      &-textarea {
+        background-color: $code-background !important;
+        border-color: $table-border-color !important;
+        color: $body-font-color !important;
+
+        &:focus {
+          border-color: $color-link !important;
+        }
+      }
+    }
+
+    .color-bg-primary {
+      background-color: $nav-background !important;
+    }
+
+    .color-bg-tertiary {
+      background-color: $nav-background !important;
+    }
+
+    .color-border-primary {
+      border-color: $table-border-color !important;
+    }
+
+    .btn {
+      background-color: $code-background !important;
+      border-color: $table-border-color !important;
+      color: $color-link !important;
+
+      &:hover {
+        background-color: darken($code-background, 5%) !important;
+        border-color: $color-link !important;
+      }
+
+      svg {
+        color: $color-link !important;
+      }
+    }
+  }
 }
