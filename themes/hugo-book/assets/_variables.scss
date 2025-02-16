@@ -102,18 +102,31 @@ $table-header-background: #2d2d2d;
       border-color: $table-border-color !important;
     }
 
-    .btn {
-      background-color: $code-background !important;
-      border-color: $table-border-color !important;
-      color: $color-link !important;
+    .btn, 
+    .btn-primary,
+    button[class*="btn"] {
+      background-color: $color-link !important;
+      color: $body-background !important;
+      border: 1px solid $color-link !important;
+      border-radius: $border-radius * 2;
+      padding: $padding-8 $padding-16;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: $padding-8;
+      margin: $padding-8 0;
 
       &:hover {
-        background-color: darken($code-background, 5%) !important;
-        border-color: $color-link !important;
+        background-color: darken($color-link, 10%) !important;
+        border-color: darken($color-link, 10%) !important;
+        text-decoration: none !important;
+        transform: translateY(-1px);
       }
 
       svg {
-        color: $color-link !important;
+        width: 16px;
+        height: 16px;
+        color: $body-background !important;
       }
     }
   }
