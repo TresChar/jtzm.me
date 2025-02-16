@@ -31,3 +31,9 @@ hasCJKLanguage = true
 
 [params]
   BookTheme = 'light'
+  BookToC = true
+  BookSection = 'docs'
+  BookSearch = true
+  BookComments = false
+  BookPortableLinks = true
+  BookServiceWorker = false
