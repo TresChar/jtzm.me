@@ -30,5 +30,5 @@ hasCJKLanguage = true
 
 
 [params]
-  BookTheme = 'light'
+  BookTheme = 'dark'
 

@@ -16,7 +16,7 @@ markup:
 
 params:
   # Theme configuration
-  BookTheme: "light"
+  BookTheme: "dark"
   BookToC: true
   BookSection: docs
   
