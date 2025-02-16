@@ -2,7 +2,7 @@
 {{ partial "docs/brand" . }}
 {{ partial "docs/search" . }}
 
-{{ if site.IsMultiLingual }}
+{{ if hugo.IsMultilingual }}
   {{ partial "docs/languages" . }}
 {{ end }}
 
